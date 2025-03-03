@@ -11,7 +11,7 @@ while True:
     print("Current State:", state)
 
     if state == 0:
-        my_oled.print_text("test", 0, 0)
+        my_oled.print_text("This is grounf control to Major Tom", 0, 0)
 
     elif state == 1:
         my_oled.print_text("something else", 0, 48)  # Bottom row
