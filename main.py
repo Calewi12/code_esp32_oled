@@ -5,7 +5,7 @@ state = 0
 
 while True:
     state += 1
-    if state >= 4:
+    if state >= 4:\
         state = 0
 
     print("Current State:", state)
