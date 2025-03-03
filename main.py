@@ -12,11 +12,13 @@ while True:
 
     if state == 0:
         text = "This is ground control to Major Tom"
-        for i in range(len(text) * -6, 128, 1):  # Scroll left to right
+        text_width = len(text) * 6  # Estimate width (6 pixels per character)
+        
+        for i in range(128,-text_width, -1):  # Scroll left to right
             my_oled.oled.fill(0)  # Clear the screen
             my_oled.print_text(text, i, 0)  # Move text dynamically
             my_oled.oled.show()
-            time.sleep(0.05)  # Adjust scrolling speed
+            time.sleep(0.00001)  # Adjust scrolling speed
 
     elif state == 1:
         my_oled.print_text("I'm stepping through the door", 0, 48)  # Bottom row
