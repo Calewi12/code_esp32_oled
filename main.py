@@ -14,7 +14,7 @@ while True:
         my_oled.print_text("This is ground control to Major Tom", 0, 0)
 
     elif state == 1:
-        my_oled.print_text("something else", 0, 48)  # Bottom row
+        my_oled.print_text("I'm stepping through the door", 0, 48)  # Bottom row
 
     elif state == 2:
         my_oled.oled.fill(0)  # Clear the screen
