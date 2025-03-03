@@ -21,7 +21,14 @@ while True:
             time.sleep(0.00001)  # Adjust scrolling speed
 
     elif state == 1:
-        my_oled.print_text("I'm stepping through the door", 0, 48)  # Bottom row
+        text = "I'm stepping through the door"
+        text_width = len(text) * 6  # Estimate width (6 pixels per character)
+    
+        for i in range(128, -text_width, -1):  # Move from right to left
+         my_oled.oled.fill(0)  # Clear the screen
+        my_oled.print_text(text, i, 48)  # Display moving text on bottom row
+        my_oled.oled.show()
+        time.sleep(0.05)  # Adjust scrolling speed
 
     elif state == 2:
         my_oled.oled.fill(0)  # Clear the screen
@@ -33,5 +40,5 @@ while True:
         my_oled.graphics.fill_rect(64, 32, 64, 32, 1)  # Bottom-right quadrant
         my_oled.oled.show()
 
-    time.sleep(1)
+        time.sleep(1)
 
