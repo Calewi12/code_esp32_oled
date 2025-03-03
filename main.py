@@ -9,7 +9,7 @@ while True:
     print("Current State:", state)
 
     if state == 0:
-        text = "This is Major Tom to grounf control"
+        text = "This is Major Tom to ground control"
         text_width = len(text) * 6  # Estimate width (6 pixels per character)
         
         for i in range(128,-text_width, -3):  # Scroll left to right
